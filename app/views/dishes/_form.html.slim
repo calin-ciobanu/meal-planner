@@ -1,0 +1,33 @@
+= form_for @dish do |f|
+  - if @dish.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@dish.errors.count, "error")} prohibited this dish from being saved:"
+      ul
+        - @dish.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :uid
+    = f.text_field :uid
+  .field
+    = f.label :type
+    = f.text_field :type
+  .field
+    = f.label :stock
+    = f.text_field :stock
+  .field
+    = f.label :can_make
+    = f.text_field :can_make
+  .field
+    = f.label :relative_preparation_time
+    = f.text_field :relative_preparation_time
+  .field
+    = f.label :instructions
+    = f.text_field :instructions
+  .field
+    = f.label :recipe_url
+    = f.text_field :recipe_url
+  .actions = f.submit

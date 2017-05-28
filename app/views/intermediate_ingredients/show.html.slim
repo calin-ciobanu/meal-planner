@@ -1,0 +1,27 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @intermediate_ingredient.name
+p
+  strong Uid:
+  = @intermediate_ingredient.uid
+p
+  strong Stock:
+  = @intermediate_ingredient.stock
+p
+  strong Price:
+  = @intermediate_ingredient.price
+p
+  strong Can make:
+  = @intermediate_ingredient.can_make
+p
+  strong Relative preparation time:
+  = @intermediate_ingredient.relative_preparation_time
+p
+  strong Recipe url:
+  = @intermediate_ingredient.recipe_url
+
+= link_to 'Edit', edit_intermediate_ingredient_path(@intermediate_ingredient)
+'  |
+= link_to 'Back', intermediate_ingredients_path

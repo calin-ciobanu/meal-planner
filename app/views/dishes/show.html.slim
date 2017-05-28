@@ -1,0 +1,30 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @dish.name
+p
+  strong Uid:
+  = @dish.uid
+p
+  strong Type:
+  = @dish.type
+p
+  strong Stock:
+  = @dish.stock
+p
+  strong Can make:
+  = @dish.can_make
+p
+  strong Relative preparation time:
+  = @dish.relative_preparation_time
+p
+  strong Instructions:
+  = @dish.instructions
+p
+  strong Recipe url:
+  = @dish.recipe_url
+
+= link_to 'Edit', edit_dish_path(@dish)
+'  |
+= link_to 'Back', dishes_path

@@ -1,0 +1,2 @@
+module IntermediateIngredientsHelper
+end

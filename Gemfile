@@ -48,9 +48,6 @@ gem 'bootstrap-sass', '~> 3.3.6'
 # Font Awesome icons
 gem 'font-awesome-rails'
 
-# User Authentication
-gem 'devise'
-
 # Form DSL
 gem 'simple_form'
 gem 'will_paginate'
@@ -60,12 +57,24 @@ gem 'carrierwave', '~> 1.0.0'
 gem 'fog-aws', '0.12.0'
 gem 'mini_magick'
 
+# Money and units
+gem 'ruby-units'
+gem 'money'
+
+# Auth
+gem 'devise'
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'omniauth-twitter'
+gem 'omniauth-google-oauth2'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  gem 'rubocop'
 end
 
 group :development do
@@ -75,6 +84,12 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'pry'
+  gem 'pry-rails'
+end
+
+group :test do
+  gem 'rspec'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

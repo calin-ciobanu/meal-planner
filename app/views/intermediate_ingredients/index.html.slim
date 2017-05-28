@@ -1,0 +1,33 @@
+h1 Listing intermediate_ingredients
+
+table
+  thead
+    tr
+      th Name
+      th Uid
+      th Stock
+      th Price
+      th Can make
+      th Relative preparation time
+      th Recipe url
+      th
+      th
+      th
+
+  tbody
+    - @intermediate_ingredients.each do |intermediate_ingredient|
+      tr
+        td = intermediate_ingredient.name
+        td = intermediate_ingredient.uid
+        td = intermediate_ingredient.stock
+        td = intermediate_ingredient.price
+        td = intermediate_ingredient.can_make
+        td = intermediate_ingredient.relative_preparation_time
+        td = intermediate_ingredient.recipe_url
+        td = link_to 'Show', intermediate_ingredient
+        td = link_to 'Edit', edit_intermediate_ingredient_path(intermediate_ingredient)
+        td = link_to 'Destroy', intermediate_ingredient, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Intermediate ingredient', new_intermediate_ingredient_path

@@ -1,0 +1,21 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @raw_ingredient.name
+p
+  strong Uid:
+  = @raw_ingredient.uid
+p
+  strong Stock:
+  = @raw_ingredient.stock
+p
+  strong Price:
+  = @raw_ingredient.price
+p
+  strong Shop urls:
+  = @raw_ingredient.shop_urls
+
+= link_to 'Edit', edit_raw_ingredient_path(@raw_ingredient)
+'  |
+= link_to 'Back', raw_ingredients_path

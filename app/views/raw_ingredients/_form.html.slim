@@ -1,0 +1,21 @@
+= form_for @raw_ingredient do |f|
+  - if @raw_ingredient.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@raw_ingredient.errors.count, "error")} prohibited this raw_ingredient from being saved:"
+      ul
+        - @raw_ingredient.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :stock
+    = f.text_field :stock
+  .field
+    = f.label :price
+    = f.text_field :price
+  .field
+    = f.label :shop_urls
+    = f.text_field :shop_urls
+  .actions = f.submit

@@ -1,0 +1,29 @@
+h1 Listing raw_ingredients
+
+table
+  thead
+    tr
+      th Name
+      th Uid
+      th Stock
+      th Price
+      th Shop urls
+      th
+      th
+      th
+
+  tbody
+    - @raw_ingredients.each do |raw_ingredient|
+      tr
+        td = raw_ingredient.name
+        td = raw_ingredient.uid
+        td = raw_ingredient.stock
+        td = raw_ingredient.price
+        td = raw_ingredient.shop_urls
+        td = link_to 'Show', raw_ingredient
+        td = link_to 'Edit', edit_raw_ingredient_path(raw_ingredient)
+        td = link_to 'Destroy', raw_ingredient, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Raw ingredient', new_raw_ingredient_path

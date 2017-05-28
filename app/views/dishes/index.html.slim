@@ -1,0 +1,35 @@
+h1 Listing dishes
+
+table
+  thead
+    tr
+      th Name
+      th Uid
+      th Type
+      th Stock
+      th Can make
+      th Relative preparation time
+      th Instructions
+      th Recipe url
+      th
+      th
+      th
+
+  tbody
+    - @dishes.each do |dish|
+      tr
+        td = dish.name
+        td = dish.uid
+        td = dish.type
+        td = dish.stock
+        td = dish.can_make
+        td = dish.relative_preparation_time
+        td = dish.instructions
+        td = dish.recipe_url
+        td = link_to 'Show', dish
+        td = link_to 'Edit', edit_dish_path(dish)
+        td = link_to 'Destroy', dish, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Dish', new_dish_path

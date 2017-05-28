@@ -1,0 +1,30 @@
+= form_for @intermediate_ingredient do |f|
+  - if @intermediate_ingredient.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@intermediate_ingredient.errors.count, "error")} prohibited this intermediate_ingredient from being saved:"
+      ul
+        - @intermediate_ingredient.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :uid
+    = f.text_field :uid
+  .field
+    = f.label :stock
+    = f.text_field :stock
+  .field
+    = f.label :price
+    = f.text_field :price
+  .field
+    = f.label :can_make
+    = f.text_field :can_make
+  .field
+    = f.label :relative_preparation_time
+    = f.text_field :relative_preparation_time
+  .field
+    = f.label :recipe_url
+    = f.text_field :recipe_url
+  .actions = f.submit
